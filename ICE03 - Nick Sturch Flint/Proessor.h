@@ -4,7 +4,7 @@
  * @version 1
  */
 
-
+#pragma once
 #ifndef _PROESSOR_H
 #define _PROESSOR_H
 
@@ -20,20 +20,20 @@ public:
  * @param age
  * @param employee_id
  */
-void Professor(std::string first_name, string last_name , float age, string employee_id);
+Proessor(std::string first_name, std::string last_name , float age, std::string employee_id);
 
-string GetEmployeeID();
+std::string GetEmployeeID() const;
 
 /**
  * @param value
  */
-void SetEmployeeID(string value);
+void SetEmployeeID(std::string value);
 
 void Teach();
 
-string ToString();
+std::string ToString() override;
 private:
-    string m_employee_id;
+std::string m_employee_id;
 };
 
 #endif //_PROESSOR_H
