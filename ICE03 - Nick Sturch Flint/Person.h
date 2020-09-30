@@ -4,7 +4,7 @@
  * @version 1
  */
 
-
+#pragma once
 #ifndef _PERSON_H
 #define _PERSON_H
 #include <string>
@@ -17,36 +17,37 @@ public:
  * @param last_name
  * @param age
  */
-void Person(std::string first_name, string last_name, float age);
+Person(std::string first_name, std::string last_name, float age);
 
-float GetAge();
+float GetAge() const;
 
 /**
  * @param value
  */
 void SetAge(float value);
 
-string GetFirstName();
+std::string GetFirstName() const;
 
 /**
  * @param value
  */
-void SetFirstName(string value);
+void SetFirstName(std::string value);
 
-string GetLastName();
+std::string GetLastName() const;
 
 /**
  * @param value
  */
-void SetLastName(string value);
+void SetLastName(std::string value);
+void SaysHello() const;
 
 void SaysHello();
 
-string ToString();
+virtual std::string ToString();
 private:
     float m_age;
-    string m_firstName;
-    string m_lastName;
+std::string m_firstName;
+std::string m_lastName;
 };
 
 #endif //_PERSON_H
