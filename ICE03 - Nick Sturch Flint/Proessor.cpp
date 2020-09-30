@@ -61,7 +61,7 @@ std::string Proessor::ToString()
     std::string outputString;
 
     outputString += Person::ToString();
-    outputString += "Employee ID: " + GetEmployeeID();
+    outputString += "\nEmployee ID: " + GetEmployeeID();
 
     return outputString;
 }

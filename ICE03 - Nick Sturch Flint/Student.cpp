@@ -61,7 +61,7 @@ std::string Student::ToString()
     std::string outputString;
 
     outputString += Person::ToString();
-    outputString += "Student ID: " + GetStudentID();
+    outputString += "\nStudent ID: " + GetStudentID();
 
     return outputString;
 }
